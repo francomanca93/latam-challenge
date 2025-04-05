@@ -4,3 +4,4 @@ duckdb==1.2.1
 notebook==7.3.3
 rich==14.0.0
 ujson==5.10.0
+emoji==2.14.1
