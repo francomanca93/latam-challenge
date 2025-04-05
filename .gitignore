@@ -4,3 +4,6 @@ tweets.json.zip
 
 # environment
 .venv
+
+# cache
+__pycache__/
