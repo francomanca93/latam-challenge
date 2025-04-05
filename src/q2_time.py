@@ -5,11 +5,10 @@ import time
 # imports externas
 import duckdb
 from rich import print
-import emoji
 
 # imports propios
 from utils import init_metrics, print_performance_table, measure_memory
-
+from utils.extract_emoji import extract_emojis
 
 def q2_time(file_path: str) -> List[Tuple[str, int]]:
     """Función principal para procesar el contenido de un tweet y obtener los emojis más utilizados.
@@ -96,20 +95,6 @@ def q2_time(file_path: str) -> List[Tuple[str, int]]:
         print_performance_table(time_metrics, mem_metrics)
         
         return final_result
-
-
-def extract_emojis(text) -> List[str]:
-    """Función para extraer emojis de un texto dado.
-
-    Parameters:
-        text (str): Texto del cual extraer emojis.
-    Returns:
-        List[str]: Lista de emojis extraídos.
-    """
-    # Usamos emoji.emoji_list() que devuelve información sobre cada emoji encontrado
-    emoji_list = emoji.emoji_list(text)
-    # Extraemos solo el texto del emoji (caracteres)
-    return [e['emoji'] for e in emoji_list]
 
 
 if __name__ == "__main__":
