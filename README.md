@@ -73,3 +73,25 @@ Returns:
 ## Sugerencias
 * Para medir la memoria en uso te recomendamos [memory-profiler](https://pypi.org/project/memory-profiler/) o [memray](https://github.com/bloomberg/memray)
 * Para medir el tiempo de ejecución te recomendamos [py-spy](https://github.com/benfred/py-spy) o [Python Profilers](https://docs.python.org/3/library/profile.html)
+
+---------
+
+## Uso
+
+### Creacion de entorno
+
+Para poder utilizar los archivos de este challenge se recomienda tener un entorno virtual para hacer pruebas.
+En este caso particular he utilizado uv para la gestion de entornos, python y dependencias.
+
+1. Instalacion de uv: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+2. Crear entorno virtual con python3.13: `uv venv .venv --python 3.13`
+3. Activar entorno: `source .venv/bin/activate`
+4. Instalar dependencias: `uv pip install -r requirements.txt`
+
+> Se opta por el uso de `uv` ya que es una herramienta muy rapida para el manejo de entornos, versiones de python y requerimientos. 
+> 
+> Link a [uv](https://docs.astral.sh/uv/)
+
+### Ejecucion de scripts
+En cada script `qN_time.py` y `qN_memory.py` se ha dejado el entry point para que se pueda ejecutar el mismo como un script.
+Para ejecutarlo utilizamos podemos hacerlo de essta manera: `python src/q1_time.py`
